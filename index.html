@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Random IP Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="light-theme">
+    <header>
+        <h1>Random IP Generator</h1>
+        <div>
+            <label for="themeSelect">Select Theme:</label>
+            <select id="themeSelect">
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+                <option value="blue">Blue</option>
+                <option value="green">Green</option>
+            </select>
+        </div>
+    </header>
+
+    <main>
+        <button id="generateBtn">Generate Random IP</button>
+
+        <input type="text" id="searchInput" placeholder="Search by country, state, or city">
+        
+        <table id="resultsTable">
+            <thead>
+                <tr>
+                    <th data-sort="ip">IP Address</th>
+                    <th data-sort="country">Country</th>
+                    <th data-sort="region">State</th>
+                    <th data-sort="city">City</th>
+                    <th data-sort="isp">ISP</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="resultsBody">
+                <!-- Results will be inserted here -->
+            </tbody>
+        </table>
+
+        <div id="pagination">
+            <button id="prevPage" disabled>Previous</button>
+            <span id="pageNumber">1</span>
+            <button id="nextPage">Next</button>
+        </div>
+
+        <button id="clearHistoryBtn">Clear History</button>
+        <button id="exportBtn">Export as CSV</button>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
