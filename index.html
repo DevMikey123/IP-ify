@@ -3,36 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advanced Random IP Generator</title>
+    <title>IP-ify</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body class="light-theme">
     <header>
-        <h1>Random IP Generator</h1>
-        <div>
-            <label for="themeSelect">Select Theme:</label>
-            <select id="themeSelect">
-                <option value="light">Light</option>
-                <option value="dark">Dark</option>
-                <option value="blue">Blue</option>
-                <option value="green">Green</option>
-            </select>
+        <h1>IP-ify</h1>
+        <div class="header-actions">
+            <div class="theme-selector">
+                <span class="material-icons">format_paint</span>
+                <select id="themeSelect">
+                    <option value="light">Light</option>
+                    <option value="dark">Dark</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                </select>
+            </div>
+            <button id="generateBtn">
+                <span class="material-icons">refresh</span> Generate Random IP
+            </button>
         </div>
     </header>
 
     <main>
-        <button id="generateBtn">Generate Random IP</button>
-
         <input type="text" id="searchInput" placeholder="Search by country, state, or city">
         
         <table id="resultsTable">
             <thead>
                 <tr>
-                    <th data-sort="ip">IP Address</th>
-                    <th data-sort="country">Country</th>
-                    <th data-sort="region">State</th>
-                    <th data-sort="city">City</th>
-                    <th data-sort="isp">ISP</th>
+                    <th data-sort="ip">IP Address <span class="material-icons">sort</span></th>
+                    <th data-sort="country">Country <span class="material-icons">sort</span></th>
+                    <th data-sort="region">State <span class="material-icons">sort</span></th>
+                    <th data-sort="city">City <span class="material-icons">sort</span></th>
+                    <th data-sort="isp">ISP <span class="material-icons">sort</span></th>
                     <th>Actions</th>
                 </tr>
             </thead>
@@ -42,13 +47,23 @@
         </table>
 
         <div id="pagination">
-            <button id="prevPage" disabled>Previous</button>
+            <button id="prevPage" disabled>
+                <span class="material-icons">navigate_before</span> Previous
+            </button>
             <span id="pageNumber">1</span>
-            <button id="nextPage">Next</button>
+            <button id="nextPage">
+                Next <span class="material-icons">navigate_next</span>
+            </button>
         </div>
 
-        <button id="clearHistoryBtn">Clear History</button>
-        <button id="exportBtn">Export as CSV</button>
+        <div class="action-buttons">
+            <button id="clearHistoryBtn" class="clear-history">
+                <span class="material-icons">delete</span> Clear History
+            </button>
+            <button id="exportBtn">
+                <span class="material-icons">save_alt</span> Export as CSV
+            </button>
+        </div>
     </main>
 
     <script src="script.js"></script>
