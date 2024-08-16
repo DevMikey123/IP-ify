@@ -1,0 +1,109 @@
+:root {
+    --bg-color-light: #ffffff;
+    --bg-color-dark: #121212;
+    --bg-color-blue: #2e3b4e;
+    --bg-color-green: #243f25;
+    --text-color-light: #000000;
+    --text-color-dark: #ffffff;
+    --text-color-blue: #ffffff;
+    --text-color-green: #ffffff;
+    --table-border-color-light: #dddddd;
+    --table-border-color-dark: #333333;
+    --btn-bg-color-light: #f0f0f0;
+    --btn-bg-color-dark: #444444;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.light-theme {
+    background-color: var(--bg-color-light);
+    color: var(--text-color-light);
+}
+
+.dark-theme {
+    background-color: var(--bg-color-dark);
+    color: var(--text-color-dark);
+}
+
+.blue-theme {
+    background-color: var(--bg-color-blue);
+    color: var(--text-color-blue);
+}
+
+.green-theme {
+    background-color: var(--bg-color-green);
+    color: var(--text-color-green);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid var(--table-border-color-light);
+    text-align: left;
+    cursor: pointer;
+}
+
+th.sortable:hover {
+    text-decoration: underline;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    background-color: var(--btn-bg-color-light);
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--btn-bg-color-light);
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+}
+
+.dark-theme th, .dark-theme td {
+    border-color: var(--table-border-color-dark);
+}
+
+.blue-theme th, .blue-theme td, .green-theme th, .green-theme td {
+    border-color: var(--table-border-color-dark);
+}
+
+.dark-theme button, .blue-theme button, .green-theme button {
+    background-color: var(--btn-bg-color-dark);
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#pageNumber {
+    margin: 0 10px;
+}
